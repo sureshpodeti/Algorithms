@@ -27,7 +27,23 @@
    case-2: if the last characters are not same then,
             f (s1[0...m-1], s2[0..n-1]) = max{f(s1[0..m-1], s2[0..n-2]) , f(s1[0..m-2], s2[0..n-1])}
    base condition would be:
-         if m == 0 or n==0 then return 0 
+         if m == 0 or n==0 then return 0
+
+  dynamic programming solution:
+   1. optimal substructure 2. overlapping subproblems
+   we can see the optimal substructure from the above recursive realtion 
+   f(s1, s2, m,n) = 1 + f(s1, s2, m-1, n-1) if last characters of the are same. 
+  overlapping can be seen in the below example:
+    f( 'ABCDGH', 'AEDFHR')
+        /                         \
+    f('ABCDGH', 'AEDFH')            f('ABCDG','AEDFHR')
+     /                \                              /
+   f('ABCDGH', 'AEDF')  f('ABCDG', 'AEDFH')   f('ABCD', 'AEDFHR') f('ABCDG', 'AEDFH')
+
+  In the above implimentation we had to calculate f('ABCDG', 'AEDFH') twice ..
+  
+ Time complexicity of DP solution is: O(m*n)
+ space complexicity : O(m*n)
   
 '''
 
