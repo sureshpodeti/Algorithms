@@ -55,7 +55,7 @@ def square_sub_matrix(A, m, n):
    if i == 0 or j ==0:
     s[i][j] = A[i][j]
    elif A[i][j] == 1:
-    s[i][j] =  min(A[i][j-1], A[i-1][j-1], A[i-1][j]) + 1
+    s[i][j] =  min(s[i][j-1], s[i-1][j-1], s[i-1][j]) + 1
    else:
     s[i][j] = 0 
  
