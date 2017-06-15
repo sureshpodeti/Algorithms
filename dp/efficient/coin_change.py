@@ -16,20 +16,30 @@
        Time complexicity: 
            T(s, m, N) = T(s, m, N-A[m-1]) + T(s, m-1, N)
            O(2^n)
+   
+       dynamic programming approach:
+               time complexicity: O(m*n), m = #of coins, N = sum to make
 '''
 
 
-def coin_change(s, m, N):
- if N == 0 :
-  return 1
+def coin_change(A, m, N):
+ s = [[0 for i in range(m+1)] for x in range(N+1)]
+
+ # first row, N = 0, intialize row with all 0's
+ for i in range(m+1):
+  s[0][i] = 1
  
- if N <0:
-  return 0
- 
- if m==0 and N>=1:
-  return 0
-  
- return coin_change(s, m, N-s[m-1]) + coin_change(s, m-1, N)
+ for i in range(N+1):
+  s[i][0] = 0
+
+ for i in range(1, N+1):
+  for j in range(1, m+1):
+   if i >= A[j-1]:
+    s[i][j] =s[i-A[j-1]][j] + s[i][j-1]
+   else:
+    s[i][j] = s[i][j-1]
+   
+ return s[N][m]
 
 
 
