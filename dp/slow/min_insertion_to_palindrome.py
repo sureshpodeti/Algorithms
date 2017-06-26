@@ -39,5 +39,8 @@ def min_insertions(st, l, h):
 
 
 
-st = raw_input()
+#st = raw_input()
+with open('/home/podeti/Desktop/data.txt', 'r') as fh:
+ st = fh.read()
+
 print "min_insertions:{}".format(min_insertions(st, 0, len(st)-1))
