@@ -1,0 +1,48 @@
+
+
+
+Following are the techniques for proofs:
+  1. proof by cases
+  2. proof by contradiction
+  3. uniqueness proofs
+  4. proof by induction
+
+
+
+proof by cases:
+--------------
+ In this proof technique we consider all the possible cases of a statement
+
+ eg: x ∈ Z, x(x+1) is even
+  proof:
+      identifying the cases: since, x ∈ Z then x could be even or x is odd
+              if x is even , x = 2n  where n ∈ Z
+              x(x+1) = 2n(2n+1) , let y = n(2n+1) , y ∈ Z
+                     = 2n.y  is even
+               
+              if x is odd, x = 2n+1 where  n ∈ Z
+                         x(x+1) = (2n+1)(2n+2), product of odd and even is 
+                        always even hence x(x+1) is even
+
+
+
+proof by contradiction:
+-----------------------
+  find complete details on contradiction in another file.
+ 
+  eg: prove that if x is rational, y is irrational, then x+y is irrational
+  
+  proof:
+    To prove: x ∈  Q, y ∈  P => x+y ∈  P
+    Assumption: assume x+y ∈  Q
+    define some objects: y = (x+y) - x
+                         since, (x+y) is rational from assumption, x is rational. 
+                          substraction of one rational number from another leaves rational
+                         so, y must be rational
+    contradiction: but y given as irrational , hence we arrived at contradiction from our assumption
+    conclusion: ∴ x+y ∈  P . (x+y) is irrational
+
+
+ 
+
+                               

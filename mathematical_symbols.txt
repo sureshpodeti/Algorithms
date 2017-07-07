@@ -1,0 +1,37 @@
+
+   number system:
+  
+  ---------------------------
+  -10   -2 -1  0 1 2       10
+                 +----------+ N natural number
+               +------------+ N U {0}  whole number
+   +------------------------+  Z Integer
+   
+Natural number (N)= {1,2,3,4, ...}
+Whole number = {0,1,2,3,4 ...}
+Integer (Z)= {-10, -2, 0, 1, 3,5 ...}
+Real number (R) = {0.2, -3.4, 6, 0, 1, 6.7}
+
+Rational number (Q) = p/q , where q!=0 and p,q belongs to Z
+Irrational number (P) , we cannot express it has p/q  ,example: Pi
+
+belongs to symbol = ∈
+for all symbol/for each = Ɐ
+if symbol = ⇒
+not symbol = ¬
+iff (if and only) symbol = ⇔ 
+there exists symbol = ∃
+sum symbol =  ∑
+set symbol = S / {}
+union symbol = ∪
+intersection symbol = ∩
+such that symbol = | , we can also use :
+eg: {x|x>0} it says "the set of all x's, such that x is greater than 0".
+    In other words any value greater than 0
+therefore symbol = ∴
+
+A ⊂ B, A is subset of B, and B is superset of A
+A ⊇ B, A is super set of B or A is equal to B
+A = B , both sets have the same elements
+|A|, no.of elements in a set
+
