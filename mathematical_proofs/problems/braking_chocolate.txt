@@ -1,0 +1,53 @@
+'''
+ Breaking chocolate bars:
+  Assume you have a chocolate bar consisting, as usual, of a no.of squares arranged in a rectangular pattern, your task is to split the bar into small squares(always breaking along the lines b/w the squares) with minimum number of breaks. How man will it take(breaks)??
+
+solution:
+ 
+ --------------------------
+ |     |    |    |    |   |
+ --------------------------
+ There are 5 squares in the  above shown diagram, we need minimum 4 breaks to get small squares
+ ∴ f(5) = 4
+
+
+ ------------
+ |   |   |  |
+ ------------
+ |   |   |  |
+ ------------
+  
+ There are 6 squares in the above shown diagram, we need minimum 5 breaks to get small squares
+ ∴ f(6) = 5
+
+ so, for N no.of squares = N-1
+ 
+  f(n) = n-1 
+
+'''
+
+To prove: Minimum no.of breaks needed to get chocolate bar of small squares from rectangular bar of total N squares is N-1
+
+proof by induction:
+  Base case:
+    f(1) = 1-1 = 0 , for one square we dont need any break hence it holds for f(1)
+
+  Induction step:
+    Let f(n) = n-1 holds for any n ≥ 1
+    
+    we need to prove f(n+1) = n
+   
+    Lets assume we have n+1 squares, lets divide them into two parts as m1 and m2, m1+m2 = n+1  ,   1≤ m1, m2 ≤ n
+    as we know, f(n) = n-1 holds
+       f(m1) = m1 -1 and (m2) = m2 -1
+    
+    so, total no.of breaks f(n+1)= m1-1 + m2 -1 +1 = m1+m2 -1 = n+1-1 =n
+    hence, f(n+1) = n
+
+   Hence, it is true for f(0) , f(n) and f(n+1).
+   ∴ f(n) = n-1 is true for n≥1 ■
+    
+
+   
+
+

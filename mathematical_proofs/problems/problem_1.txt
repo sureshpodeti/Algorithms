@@ -1,0 +1,33 @@
+'''
+  For a,b,c ∈ R, 
+  ab + bc + ca ≤ aa + bb + cc
+  
+  Equality is achieved only for a=b=c
+'''
+
+To prove: if a=b=c ,then ab + bc + ca ≤ aa + bb + cc
+            a=b=c →  ab + bc + ca ≤ aa + bb + cc
+            p →  q
+
+
+As p can be expressed as expression, direct proof is appropriate to try for.
+
+without loss of generality(WLOG), we may assume a ≤ b ≤ c
+
+ multiply inequality by a:   aa ≤ ab ≤ ca
+ multiply inequality by b:   ab ≤ bb ≤ bc
+ multiply inequality by c:   ac ≤ bc ≤ cc
+--------------------------------------------
+             adding terms:  
+
+
+
+
+
+(a-b)^2 + (b-c)^2 + (c-a)^2 ≥ 0
+
+2(a^2 + b^2 + c^2) - 2(ab+bc+ca) ≥ 0
+a^2 + b^2 + c^2  ≥ ab+bc+ca
+
+
+

@@ -17,7 +17,10 @@ Irrational number (P) , we cannot express it has p/q  ,example: Pi
 
 belongs to symbol = ∈
 for all symbol/for each = Ɐ
+ eg: 1. ∀ x: P(x) means P(x) is true for all x
+     2. ∀ n ∈ ℕ : n2 ≥ n.
 if symbol = ⇒
+implies symbol = →
 not symbol = ¬
 iff (if and only) symbol = ⇔ 
 there exists symbol = ∃
@@ -29,6 +32,9 @@ such that symbol = | , we can also use :
 eg: {x|x>0} it says "the set of all x's, such that x is greater than 0".
     In other words any value greater than 0
 therefore symbol = ∴
+end of proof symbol = ■
+
+
 
 A ⊂ B, A is subset of B, and B is superset of A
 A ⊇ B, A is super set of B or A is equal to B

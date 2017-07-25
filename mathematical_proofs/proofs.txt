@@ -18,11 +18,11 @@ proof by cases:
       identifying the cases: since, x ∈ Z then x could be even or x is odd
               if x is even , x = 2n  where n ∈ Z
               x(x+1) = 2n(2n+1) , let y = n(2n+1) , y ∈ Z
-                     = 2n.y  is even
+                     = 2n.y  is even ■
                
               if x is odd, x = 2n+1 where  n ∈ Z
                          x(x+1) = (2n+1)(2n+2), product of odd and even is 
-                        always even hence x(x+1) is even
+                        always even hence x(x+1) is even ■
 
 
 
@@ -40,9 +40,64 @@ proof by contradiction:
                           substraction of one rational number from another leaves rational
                          so, y must be rational
     contradiction: but y given as irrational , hence we arrived at contradiction from our assumption
-    conclusion: ∴ x+y ∈  P . (x+y) is irrational
+    conclusion: ∴ x+y ∈  P . (x+y) is irrational ■
+
+
+  eg: prove sqrt(2) is an irrational number
+      To prove: sqrt(2) ∈  P
+      Assumption: sqrt(2) ∈  Q
+                  sqrt(2) = p/q , where q !=0 and p,q ∈  Z
+                       2q^2 = p^2
+                      ∴ p^2 is even => p is even
+                     p = 2n , n ∈  Z
+                     2. q^2 = 4.n^2
+                        q^2 = 2.n^2 
+                    ∴ q^2 is even => q is even 
+                    p,q are even hence two even numbers cannot be relatively prime so we arrived at contradiction
+     conclusion: sqrt(2) is irrational ■
+                   
+   
+
+proof by induction:
+------------------ 
+ Let p(n) be a statement about the positive integer n. If the following are true:
+ 1. p(1)  [base case]
+ 2.  k∈ N, p(k) => p(k+1), then [induction step]
+     Ɐn∈ N p(n) [conclusion]
+
+
+   eg: 
+    To prove: Ɐn∈ N, p(n) = 1+2+3+..+n = n(n+1)/2
+    base case: p(1) = 1 = 1(2)/2 = 1 , true
+    induction step: assume p(k) = k(k+1)/2 holds true for some k ∈ N
+         to prove:    p(k+1) = (k+1)(k+2)/2
+                   1+2+3+ ....+k+(k+1) = (k+1)(k+2)/2
+                      k(k+1)/2 + (k+1) = (k+1)(k+2)/2
+                     (k(k+1) + 2(k+1))/2 = (k+1)(k+2)/2
+                      (k+1) (k+2)/2 = (k+1)(k+2)/2
+      p(k+1) is also true
+    conclusion: since p(k) => p(k+1) k∈ N, so we can say Ɐn∈ N p(n)
+
+  eg: 
+     To prove: If a1, a2, ...an ∈ R , a1.a2....an = 0, then ai = 0 for some i∈ N
+       Ɐi ∈  N, ai ∈  R: ai = 0 => a1.a2. ...an = 0 
+     base case: p(1) = a1 = 0: a1 = 0 
+     induction step: assume p(k) holds true for Ɐk∈ N
+            to prove : p(k+1) is true
+                p(k+1) = a1.a2.a3. ...ak. a(k+1) = 0
+                                 p(k).a(k+1) = 0 true
+      conclusion: its true
+
+
+
+                                    
+                     
+                   
+      
+      
+
 
 
  
-
-                               
+                              
+ 
