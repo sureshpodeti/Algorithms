@@ -1,4 +1,5 @@
- Following texts contains the concepts of greedy algorithm, and the technique to verify the greedy approach that produces optimal solution
+ Following texts contains the concepts of greedy algorithm, and the technique to verify the greedy approach 
+ that produces optimal solution
 
  Example 1: Job scheduling
     problem description: We have set of requests {1,2,...,n}; the ith request corresponds to 
@@ -7,7 +8,8 @@
     large a compatible subset as possible. compatible sets of maximum size will be called optimal
 
     algorithm: 
-      -----------------------------------------------------------------------
+      ***********************************************************************
+      ***********************************************************************
       Intially Let R be the set of all requests, and let A be empty
       While R is not yet empty
             Choose a request i ∈ R that has the smallest finishing time
@@ -15,7 +17,8 @@
             Delete all requests from R that are not compatible with request i
       EndWhile 
       Return the set A as the set of accepted requests
-      ------------------------------------------------------------------------ 
+      ************************************************************************
+      ************************************************************************ 
       Greedy notion: we are choosing greedily the request which has smallest finishing time
       at each sequencial step. 
 
@@ -43,5 +46,39 @@
            we will compare the partial solutions that the greedy algorithm contructs to intial
            segments of the solution O, and show that the greedy algorithm is doing better in a step-by-step fashion
 
-     
+           Lemma-1: Greedy algorithm partial solution stays ahead of the partial solution of O.
+                    Let f(ir) gives finish time for request r in set A. ∀r ≤ k, f(ir) ≤ f(jr)
+           proof by induction:
+               base case:
+                    f(i1) ≤ f(j1) holds
+               induction step:
+                    Let us assume r>1, and our induction hypothesis that the  statement is true for r-1,
+                    and we try to prove if for r.
+                    
+                    for r-1, f(ir-1) ≤ f(jr-1) holds (by assumption)
+                    
+                    starting time of jr request is less greater than the finish time of request r-1
+                    i.e s(jr)  ≥ f(jr-1)  ≥ f(ir-1)
+                        s(jr)  ≥ f(ir-1)  ----- 1
+                    it says jr request should present in set A ( beacuse it compatible with set A)
+                        f(ir-1) ≤ f(jr-1)  ----- 2
+                    from eq.1 and eq.2, f(ir) ≤ f(jr)
+
+              Thus, If we assume f(ir) ≤ f(jr) true, then
+                                f(ir-1) ≤ f(jr-1) remains true
+                    but we know , f(i1) ≤ f(j1) is true, it means
+                                  f(i2) ≤ f(j2) ..... so on.
+                    Hence, ∀r ≤ k, f(ir) ≤ f(jr) true.  
+                    
+           Lemma-2: The greedy algorithm returns an optimal set A
+                proof by contradiction:
+                   Assume A is not optimal, then an optimal set O must have more requests, that is
+                   we must have m>k. at r=k , f(ik) ≤ f(jk). since, m>k , there is a requst jk+1 in O.
+                   This request starts after request jk ends, and hence after ik ends.This means jk+1 must
+                   have been included in the set A, and in this case m=k. Hence we arrived at contradiction
+                   so, The set A returned is one of the optimal solution
+
+
+
+                     
 Example 2:
