@@ -38,18 +38,10 @@
            Let i1, ...,ik be the set of requests in A iin the order they were added to A.
            Note that |A| = k. similarly, let the set of requests in O be denoted by j1,...jm.
            our goal is to prove that m=k. Assume that the requests in O are also ordered in 
-           the natural left-to-right order of the corresponding intervalthe proof is: we will compare the partial solutions that the 
-         greedy algorithm contructs to intial segments of the solution O, and show that the
-         greedy algorithm is doing better in a step-by-step fashion
+           the natural left-to-right order of the corresponding interval.
+          
+           we will compare the partial solutions that the greedy algorithm contructs to intial
+           segments of the solution O, and show that the greedy algorithm is doing better in a step-by-step fashion
 
-         proof:
-           Let i1, ...,ik be the set of requests in A iin the order they were added to A.
-           Note that |A| = k. similarly, let the set of requests in O be denoted by j1,...jm.
-           our goal is to prove that m=k. Assume that the requests in O are also ordered in 
-           the natural left-to-right order of the corresponding intervals   
-
-
-
-
-
- Example 2:
+     
+Example 2:
