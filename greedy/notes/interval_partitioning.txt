@@ -1,0 +1,26 @@
+
+ Problem description: This problem is variation of interval scheduling problem. We have only
+ one resource and many requests with time interval for it should be scheduled, ti, and deadline
+ for each request, di.
+
+ Whenever a resource is not scheduled within the specified deadline, then we say it is late.
+ Lateness is defined as ,l = ti- di. Our goal here is to minimize the maximum lateness
+
+ eg: A = (1, 2)  B = (10, 10) where each request in the form of (ti, di)
+     suppose if we schedule the first request 
+     
+      --------------------------
+               2               10
+      then (10-1) units will be remained for the second request, i.e second request which has
+      10 units will be scheduled in a time of 9 units, but we cannot schedule it fully.
+      
+       hence, lateness (l) = (t1+t2) - d2 = 1+10 - 10 = 1
+       so, unit 1 is the lateness here. 
+
+   
+ Input: (ti,di) , 1<= i <= n , n = no.of requests 
+ Ouput: Scheduled requests with minimized maximum lateness
+
+ Aproaches:
+  a) Greedily scheduling jobs according to sorted time intervals (ti)
+  b) Greedily scheduling jobs according to sorted deadlines (di) 
