@@ -23,8 +23,8 @@
 
  Aproaches:
   a) Greedily scheduling jobs according to sorted time intervals (ti)
-     Lemma-1: Scheduling requests based on sorted by time intervals does not gives the optimal solution
-       proof by contradiction: Assume, scheduing based on sorted by time intervals gives the optimal solution
+     Lemma-1: Scheduling requests based on sorted by time intervals does not always gives the optimal solution
+       proof by contradiction: Assume, scheduing based on sorted by time intervals always gives the optimal solution
           Let (t1, d1), (t2, d2)
 
           -----------------------------------------
@@ -43,7 +43,7 @@
           now, d2 - t1 >= t2 
          
           If we can prove the following then, we can say our greedy algorithm based on sorted time interval doesnot 
-          produce optimal solution ( minimized maximum lateness)
+          always produce optimal solution ( minimized maximum lateness)
           
           lateness by scheduling first job first > lateness by scheduling second job first     ----------eq.1 
           
@@ -52,7 +52,7 @@
           multiplying with -1 on both sides:  d2 < d1 , eq.1 can happen when we have d2 < d1. Here, this situtation 
           is very much possible as shown in the digram above( where d1 could be at location c) .
           
-         Hence, we arrived at a contradiction. So, greedy algorithm based on sorted time interval doesnot produce 
+         Hence, we arrived at a contradiction. So, greedy algorithm based on sorted time interval doesnot always produce 
          optimal solution
   
  
