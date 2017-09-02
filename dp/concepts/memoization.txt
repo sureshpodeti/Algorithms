@@ -1,0 +1,15 @@
+  Memoization:
+  -----------
+       if we need to find the value for some state say dp[n] and instead
+       of starting from the base state dp[0]; we ask our answer from the 
+       states that can reach the destination state dp[n] following the state
+       transition relation, then it is top-down fashion of DP
+
+
+       Here, we start our journey from the top most destination state and compute
+       its answer by taking in count the values of states that can be reach the destination state,
+       till we reach the bottom most base state.
+
+       As we can see we are sgtoring the most recent cache up to a limit so that if next time we got
+       a call for the same state we simply return it from the memory. so, this is why we call it memoization
+       as we are storing the most recent state values

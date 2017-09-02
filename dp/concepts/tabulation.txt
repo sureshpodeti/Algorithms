@@ -1,0 +1,5 @@
+   Tabulation: Bottom-up approach
+     Starts its transition from the bottom-most base case dp[0] and reaches
+     it destination state dp[n]. Here, dp table is being populated sequentially
+     and we are directly accessing the calculated states from the table itself
+     and hence, we call it tabulation method.

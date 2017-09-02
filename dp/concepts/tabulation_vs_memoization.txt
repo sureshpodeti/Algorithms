@@ -1,0 +1,18 @@
+
+                Tabulation                                                      Memoization
+   1. state transition relation is difficult to think               state transition relation is easy to think
+
+   2. code gets complicated when lot of conditions are              code is easy and less complicated 
+      required
+
+   3. Fast,as we directly access previous states from               slow due to lot of recursive calls and return 
+      the table                                                     statements
+
+   4. If all subproblems must be solved at least once,              If some subproblems in the subproblem space need
+      a bottom-up dynamic programming algorithm usually             not be solved at all, the memoized solution has the
+      outperforms a top-down memoized algorithm by a                advantage of solving only those subproblems that are 
+      constant factor                                               definitely required
+   
+   5. In tabulated version, starting from the first entry           Unlike the tabulated version, all entries of the lookup
+      all entries are filled one by one                             table are not necessarily filled in memoized version. The 
+                                                                    table is filled on demand
